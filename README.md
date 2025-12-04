@@ -3,7 +3,7 @@
 **Give Claude flawless, persistent memory across all conversations** - No configuration, no MCP server, just perfect recall.
 
 [![License: Non-Commercial](https://img.shields.io/badge/License-Non--Commercial-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/yourusername/claude-perfect-memory)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/tekzer0/fixed-perfect-memory)
 
 ## What Is This?
 
@@ -27,9 +27,12 @@ Claude is brilliant, but it forgets everything between sessions:
 
 ## Quick Start
 
-### 1. Download the Skill
+### 1. Download the Skill & Clone the repo
 
-Download `perfect-memory.skill` from the [releases page](https://github.com/yourusername/claude-perfect-memory/releases).
+Download `fixed-perfect-memory.zip` from the [releases page](https://github.com/yourusername/claude-perfect-memory/releases).
+
+```bash
+git clone https://github.com/tekzer0/fixed-perfect-memory.git
 
 ### 2. Install in Claude Desktop
 
@@ -43,7 +46,7 @@ Download `perfect-memory.skill` from the [releases page](https://github.com/your
 **Option B: Manual**
 ```bash
 # Copy to Claude skills directory
-cp perfect-memory.skill ~/Library/Application\ Support/Claude/skills/
+cp fixed-perfect-memory.zip ~/Library/Application\ Support/Claude/skills/
 # Restart Claude Desktop
 ```
 
@@ -52,7 +55,7 @@ cp perfect-memory.skill ~/Library/Application\ Support/Claude/skills/
 First time only:
 ```bash
 cd /path/to/skill/installation
-python3 /mnt/s/claude-perfect-memory/server/initialize.py
+python3 /fixed-perfect-memory/resources/initialize.py
 ```
 
 ### 4. It Just Works
@@ -89,7 +92,7 @@ Claude never forgets:
 {
   "abilities": [
     "Use MCP Tools without asking",
-    "Full S: drive access",
+    "Full /fixed-perfect-memory/ folder access",
     "Access past chats automatically",
     ...
   ],
@@ -176,7 +179,7 @@ python3 scripts/search_memory.py "query terms"
 ### Database (SQLite)
 
 ```
-/mnt/s/claude-perfect-memory/database/memory.db
+/fixed-perfect-memory/database/memory.db
 ```
 
 **Tables:**
@@ -191,7 +194,7 @@ python3 scripts/search_memory.py "query terms"
 ### File Storage
 
 ```
-/mnt/s/claude-perfect-memory/
+/fixed-perfect-memory/
 ├── database/
 │   └── memory.db
 ├── chats/           # Full transcripts (markdown)
@@ -259,7 +262,7 @@ python3 scripts/quick_reference.py
 ## File Structure
 
 ```
-perfect-memory-skill/
+fixed-perfect-memory/
 ├── SKILL.md                 # Skill definition
 ├── LICENSE                  # Non-commercial license
 ├── README.md                # This file
@@ -310,14 +313,14 @@ See [LICENSE](LICENSE) for full terms.
 
 ## Credits
 
-Created by Aaron to give Claude flawless memory and make AI assistants more helpful for everyone.
+Created by tekzer0 to give Claude flawless memory and make AI assistants more helpful for everyone.
 
 Built with the goal of making the world a little bit better, one conversation at a time.
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/claude-perfect-memory/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/claude-perfect-memory/discussions)
+- **Issues**: [GitHub Issues](https://github.com/tekzer0/fixed-perfect-memory/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/tekzer0/fixed-perfect-memory/discussions)
 
 ## Changelog
 

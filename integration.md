@@ -89,7 +89,7 @@ Skills:
 ## File Structure
 
 ```
-S:/
+DIR/
 ├── fixed-perfect-memory/          # Data storage
 │   ├── database/
 │   │   └── memory.db               # SQLite database
@@ -151,7 +151,7 @@ The skill auto-triggers on:
 
 ```bash
 # Claude executes this automatically
-python3 /mnt/s/skills/perfect-memory-skill/scripts/load_context.py
+python3 /skills/fixed-perfect-memory/scripts/load_context.py
 ```
 
 Output goes directly into Claude's context.
@@ -163,7 +163,7 @@ When Claude learns something new:
 ```python
 # In conversation flow
 bash_tool(
-    command="python3 /mnt/s/skills/perfect-memory-skill/scripts/store_ability.py 'Ability' 'Description'",
+    command="python3 /fixed-perfect-memory/scripts/store_ability.py 'Ability' 'Description'",
     description="Recording newly discovered capability"
 )
 ```
@@ -175,7 +175,7 @@ When detailed information needs storing:
 ```python
 # Create entity with stdin content
 bash_tool(
-    command=f"echo '{markdown_content}' | python3 /mnt/s/skills/perfect-memory-skill/scripts/create_entity.py 'Name' 'type' 'Summary' 0.8",
+    command=f"echo '{markdown_content}' | python3 /fixed-perfect-memory/scripts/create_entity.py 'Name' 'type' 'Summary' 0.8",
     description="Creating detailed entity file"
 )
 ```
@@ -186,7 +186,7 @@ When context is needed:
 
 ```python
 bash_tool(
-    command="python3 /mnt/s/skills/perfect-memory-skill/scripts/search_memory.py 'query'",
+    command="python3 /fixed-perfect-memory/scripts/search_memory.py 'query'",
     description="Searching memory for relevant information"
 )
 ```
@@ -194,14 +194,14 @@ bash_tool(
 ## Benefits
 
 1. **Zero Configuration** - Works immediately after skill installation
-2. **No User Time** - Aaron doesn't waste time on setup
+2. **No User Time** - User doesn't waste time on setup
 3. **Full Functionality** - All features of MCP version
 4. **Lower Token Usage** - No protocol overhead
 5. **Automatic Loading** - Context available at session start
 6. **Direct Execution** - bash_tool calls scripts directly
-7. **Portable** - All files on S: drive, easy to backup/share
+7. **Portable** - All files on dir, easy to backup/share
 
-## Aaron's Requirements Met
+##  Requirements Met
 
 ✅ "No MCP server needed" - Pure skill implementation  
 ✅ "Automatic" - Auto-loads at session start  
